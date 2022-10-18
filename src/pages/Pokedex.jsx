@@ -8,13 +8,25 @@ import SelectByType from '../components/pokedex/SelectByType'
 const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
-  const [typeSelected, setTypeSelected] = useState()
+  const [typeSelected, setTypeSelected] = useState('All Pokemons')
+
   useEffect(() => {
-    const URL='https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
-   axios.get(URL)
-   .then(res => setPokemons(res.data.results))
-   .catch(err => console.log(err))
-  }, [])
+    if (typeSelected !== 'All Pokemons') {
+      axios.get(typeSelected)
+        .then(res => {
+          const result = res.data.pokemon.map(e => e.pokemon)
+          setPokemons(result)
+        })
+        .catch(err => console.log(err))
+
+    } else{
+      const URL='https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
+      axios.get(URL)
+       .then(res => setPokemons(res.data.results))
+       .catch(err => console.log(err))
+    }
+  
+     }, [typeSelected])
   
 
   const userName = useSelector(state => state.userName)
@@ -22,11 +34,11 @@ const Pokedex = () => {
     <div>
       <header>
         <h1>Pokedex</h1>
-        <p>Welcome<span>{userName}</span>, here you can find your favorite pokemon</p>
+        <p>Welcome <span>{userName}</span>, here you can find your favorite pokemon</p>
       </header>
       <aside>
         <InputSearch />
-        <SelectByType />
+        <SelectByType setTypeSelected={setTypeSelected}/>
       </aside>
       <main>
         <div className='card-container'>
