@@ -71,3 +71,18 @@
 .card-poke__stat-number{
     font-size: 18px;
 }
+
+/* border color */
+.border-grass{
+    border-color: #C3DEA3;
+}
+/* backgrond coloe */
+.bg-grass{
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+
+}
+
+/* LETTER COLOR */
+.letter-grass{
+    color: #416460;
+}

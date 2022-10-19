@@ -19,12 +19,12 @@ const CardPoke = ({url}) => {
   }
   console.log(pokemon);
   return (
-   <article className='card-poke' onClick={handleClick}>
-      <header className='card-poke__header'>
+   <article className={`card-poke border-${pokemon?.types[0].type.name}`} onClick={handleClick}>
+      <header className={`card-poke__header bg-${pokemon?.types[0].type.name}`}>
         <img className='card-poke__sprite' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
       <section className='card-poke__body'>
-         <h3 className='card-poke__name'>{pokemon?.name}</h3>
+         <h3 className={`card-poke__name letter-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h3>
          <ul className='card-poke__types-container'>
           {
             pokemon?.types.map(type => (
