@@ -21,9 +21,9 @@ const CardPoke = ({url}) => {
   return (
    <article className='card-poke' onClick={handleClick}>
       <header className='card-poke__header'>
-        <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
+        <img className='card-poke__sprite' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
-      <section>
+      <section className='card-poke__body'>
          <h3 className='card-poke__name'>{pokemon?.name}</h3>
          <ul className='card-poke__types-container'>
           {
