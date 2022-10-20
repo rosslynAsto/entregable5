@@ -1,0 +1,24 @@
+.search__div{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0em;
+    
+}
+.input__search{
+   
+    box-shadow: -1px 1px 10px #0004;
+    padding:.5em ;
+    border-radius: 5px;
+}
+.search__btn{
+   cursor: pointer;
+   color: var(--color-white);
+    background-color: var(--color-red);
+    box-shadow: -1px 1px 10px #0004;
+    padding: .5em;
+    border-radius: 5px;
+}
+.search__btn:hover{
+    filter: brightness(1.1);
+}
+
