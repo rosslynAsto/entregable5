@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import CardPoke from '../components/pokedex/CardPoke'
 import InputSearch from '../components/pokedex/InputSearch'
 import SelectByType from '../components/pokedex/SelectByType'
+import './styles/pokedex.css'
 
 const Pokedex = () => {
 
@@ -33,8 +34,8 @@ const Pokedex = () => {
   return (
     <div>
       <header>
-        <h1>Pokedex</h1>
-        <p>Welcome <span>{userName}</span>, here you can find your favorite pokemon</p>
+        <h1 className='pokedex__title'>Pokedex</h1>
+        <p className='pokedex__p'>Welcome <span className='pokedex__span'>{userName}</span>, here you can find your favorite pokemon</p>
       </header>
       <aside>
         <InputSearch />

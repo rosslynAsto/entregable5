@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './styles/inputSearch.css'
 
 const InputSearch = () => {
 
@@ -10,8 +11,11 @@ const submit = (e) =>{
 }
   return (
     <form onSubmit={submit}>
-      <input id='search' type="text" placeholder='Search a pokemon' />
-      <button>Search</button>
+      <div className='search__div'>
+      <input id='search' type="text" placeholder='Search a pokemon' className='input__search' />
+      <button className='search__btn'>Search</button>
+      </div>
+     
     </form>
   )
 }

@@ -1,0 +1,10 @@
+.option__poke{
+    transform: translateX(-50%);
+    left: 50%;
+   
+  }
+  .op__poke{
+    background-color: red;
+    text-align: center;
+    padding: 5em;
+  }

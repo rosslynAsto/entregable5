@@ -1,0 +1,22 @@
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-gap: 1em;
+    justify-content: center;
+    padding: .8em;
+    margin: auto;
+  
+ 
+}
+.pokedex__title{
+    text-align: center;
+    color: red;
+}
+.pokedex__p{
+    color: red;
+    text-align: center;
+}
+.pokedex__span{
+    color: black;
+   
+}
